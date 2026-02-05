@@ -1,59 +1,106 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Atomic UI Showcase
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repo showcases the `chriskelemba/laravel-atomic-ui` package with a full multi-page showcase built on Laravel + Tailwind + Alpine.
 
-## About Laravel
+The showcase lives at `/` and `/showcase/*` routes.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Showcase Pages
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- `/` Overview
+- `/showcase/buttons`
+- `/showcase/inputs`
+- `/showcase/forms`
+- `/showcase/navigation`
+- `/showcase/data`
+- `/showcase/overlays`
+- `/showcase/feedback`
+- `/showcase/lists`
+- `/showcase/sidebar`
+- `/showcase/utilities`
+- `/showcase/display`
+- `/showcase/visuals`
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Package Usage
 
-## Learning Laravel
+Consumers can use hyphenated tags out of the box after `composer require` (no publishing needed). The package also supports the standard `x-atomic-ui::` namespace.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Example
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```blade
+<x-atomic-ui-button>Primary</x-atomic-ui-button>
+<x-atomic-ui-input name="email" placeholder="you@example.com" />
+<x-atomic-ui-modal title="Confirm">
+    <x-slot:trigger>
+        <x-atomic-ui-button>Open</x-atomic-ui-button>
+    </x-slot:trigger>
+    Modal content here.
+</x-atomic-ui-modal>
+```
 
-## Laravel Sponsors
+## Component Inventory
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Atoms
 
-### Premium Partners
+- `atomic-ui-button`
+- `atomic-ui-input`
+- `atomic-ui-action-button`
+- `atomic-ui-badge`
+- `atomic-ui-avatar`
+- `atomic-ui-tag`
+- `atomic-ui-divider`
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Molecules
 
-## Contributing
+- `atomic-ui-form-field`
+- `atomic-ui-modal`
+- `atomic-ui-alert`
+- `atomic-ui-toast`
+- `atomic-ui-tooltip`
+- `atomic-ui-popover`
+- `atomic-ui-dropdown`
+- `atomic-ui-tabs`
+- `atomic-ui-breadcrumb`
+- `atomic-ui-pagination`
+- `atomic-ui-steps`
+- `atomic-ui-toggle`
+- `atomic-ui-checkbox`
+- `atomic-ui-radio-group`
+- `atomic-ui-select`
+- `atomic-ui-textarea`
+- `atomic-ui-date-input`
+- `atomic-ui-file-upload`
+- `atomic-ui-search-bar`
+- `atomic-ui-filter-chips`
+- `atomic-ui-sort-control`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Organisms
 
-## Code of Conduct
+- `atomic-ui-form`
+- `atomic-ui-panel`
+- `atomic-ui-table`
+- `atomic-ui-stat-card`
+- `atomic-ui-sidebar`
+- `atomic-ui-line-chart`
+- `atomic-ui-bar-chart`
+- `atomic-ui-pie-chart`
+- `atomic-ui-calendar`
+- `atomic-ui-drawer`
+- `atomic-ui-empty-state`
+- `atomic-ui-progress`
+- `atomic-ui-skeleton`
+- `atomic-ui-section-header`
+- `atomic-ui-timeline`
+- `atomic-ui-activity-list`
+- `atomic-ui-task-list`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Templates
 
-## Security Vulnerabilities
+- `atomic-ui-app-shell`
+- `atomic-ui-dashboard`
+- `atomic-ui-crud-page`
+- `atomic-ui-resource-index`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Notes
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Alpine is loaded automatically by the package layout.
+- The showcase uses the hyphenated tags everywhere.
